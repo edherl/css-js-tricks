@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+body {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  color: #212a3e;
+  background-color: #f1f6f9;
+  transition: background-color 0.5s ease;
+}
+
+body.dark {
+  color: #f1f6f9;
+  background-color: #212a3e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .switch {
+  font-size: 1em;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+}
+.container .switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2f4f;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+.container .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: #d4adfc;
+  transition: 0.5s;
+}
+.container input:checked + .slider::before {
+  background-color: #ffd95a;
+}
+.container input:checked + .slider {
+  background-color: #6c9bcf;
+}
+.container input:checked + .slider:before {
+  transform: translateX(1.9em);
+}/*# sourceMappingURL=style.css.map */

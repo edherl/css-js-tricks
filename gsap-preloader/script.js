@@ -1,4 +1,5 @@
-let timeline = gsap.timeline();
+Splitting();
+const timeline = gsap.timeline();
 
 timeline.from(".cover h1", {
   opacity: 0,
@@ -59,21 +60,20 @@ timeline.to(
   3
 );
 
-timeline.from(".container h1", {
-  delay: 0.5,
-  duration: 1,
+timeline.from(".container .title .char", {
   opacity: 0,
+  delay: .5,
+  stagger: .05,
   y: "100%",
-  ease: "power2.out",
-});
+  ease: "power4.out"
+})
 
-timeline.from(".container p", {
-  delay: 0.5,
-  duration: 0.5,
+timeline.from(".container .bio .char", {
   opacity: 0,
+  stagger: .01,
   y: "100%",
-  ease: "power2.out",
-});
+  ease: "power4.out"
+})
 
 timeline.from(".container div", {
   delay: 0.5,

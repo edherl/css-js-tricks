@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;700&display=swap");
+
+body {
+  box-sizing: border-box;
+  font-family: "Saira Semi Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222831;
+  color: #222831;
+  font-size: 2rem;
+}
+
+.loader {
+  color: #eeeeee;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .marker {
+    display: inline-block;
+    color: #ffd369;
+    animation: rotate 4.5s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.top,
+.right,
+.bottom,
+.left {
+  position: fixed;
+  background: #eeeeee;
+  padding: 2.5px;
+}
+.top {
+  width: 100%;
+}
+.right {
+  right: 0;
+  height: 100%;
+}
+.bottom {
+  bottom: 0;
+  width: 100%;
+}
+.left {
+  left: 0;
+  height: 100%;
+}
+
+.container {
+  position: fixed;
+  background-color: #eeeeee;
+  height: 100%;
+  width: 100vw;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25rem;
+    h1 {
+      font-size: 4.5rem;
+    }
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    img {
+      width: 500px;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 844px) {
+    .content {
+      margin: 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

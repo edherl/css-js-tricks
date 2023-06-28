@@ -8,11 +8,12 @@ body {
   overflow: hidden;
   background-color: #222831;
   color: #222831;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .loader {
   color: #eeeeee;
+  font-size: 1.5em;
   font-weight: 700;
   position: absolute;
   top: 50%;
@@ -69,13 +70,13 @@ body {
     align-items: center;
     gap: 25rem;
     h1 {
-      font-size: 4.5rem;
+      font-size: 3.75em;
     }
     a {
-      font-size: 1.5rem;
       text-decoration: none;
     }
     img {
+      height: 100vh;
       width: 500px;
       object-fit: cover;
     }

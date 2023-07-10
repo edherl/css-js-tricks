@@ -1,6 +1,6 @@
-let t1 = gsap.timeline();
+let timeline = gsap.timeline();
 
-t1.from(".brand-1", {
+timeline.from(".brand-1", {
   opacity: 0,
   xPercent: -100,
   delay: 0.5,
@@ -8,7 +8,8 @@ t1.from(".brand-1", {
   ease: "power1.out",
   yoyo: true,
 });
-t1.from(
+
+timeline.from(
   ".dot",
   {
     opacity: 0,
@@ -21,19 +22,19 @@ t1.from(
   0.01
 );
 
-t1.to(".dot", {
+timeline.to(".dot", {
   x: 20,
   duration: 1,
   ease: "power1.out",
 });
 
-t1.to(".dot", {
+timeline.to(".dot", {
   x: -5,
   duration: 0.5,
   ease: "power1.out",
 });
 
-t1.to(".brand-1", {
+timeline.to(".brand-1", {
   opacity: 0,
   xPercent: -100,
   duration: 1,
@@ -41,7 +42,7 @@ t1.to(".brand-1", {
   yoyo: true,
 });
 
-t1.to(
+timeline.to(
   ".dot",
   {
     opacity: 0,
@@ -51,7 +52,7 @@ t1.to(
   3
 );
 
-t1.to(
+timeline.to(
   ".cover",
   {
     xPercent: -100,
@@ -61,7 +62,7 @@ t1.to(
   3
 );
 
-t1.to(
+timeline.to(
   ".cover-2",
   {
     xPercent: -100,
@@ -71,7 +72,7 @@ t1.to(
   3.2
 );
 
-t1.to(
+timeline.to(
   ".cover-3",
   {
     xPercent: -100,
@@ -81,7 +82,7 @@ t1.to(
   3.4
 );
 
-t1.to(
+timeline.to(
   ".cover-4",
   {
     xPercent: -100,
@@ -91,7 +92,7 @@ t1.to(
   3.6
 );
 
-t1.from(
+timeline.from(
   ".brand-2",
   {
     xPercent: -100,
@@ -102,21 +103,21 @@ t1.from(
   3.8
 );
 
-t1.from(".cover-5", {
+timeline.from(".cover-5", {
   yPercent: -100,
   duration: 1,
   ease: "power1.out",
   delay: 0.4,
 });
 
-t1.from(".logo", {
+timeline.from(".logo", {
   xPercent: -100,
   opacity: 0,
   duration: 1,
   ease: "power1.out",
 });
 
-t1.from(
+timeline.from(
   ".header-img",
   {
     xPercent: -100,
@@ -127,7 +128,7 @@ t1.from(
   6
 );
 
-t1.from(
+timeline.from(
   ".items, .contact",
   {
     xPercent: 100,
@@ -138,8 +139,7 @@ t1.from(
   6.5
 );
 
-
-t1.from(
+timeline.from(
   ".heading",
   {
     xPercent: 100,
@@ -150,7 +150,7 @@ t1.from(
   6.5
 );
 
-t1.from(
+timeline.from(
   ".sub-heading",
   {
     xPercent: 100,
@@ -161,7 +161,7 @@ t1.from(
   6.2
 );
 
-t1.from(
+timeline.from(
   ".button",
   {
     yPercent: 100,
@@ -209,7 +209,6 @@ window.addEventListener("mousemove", (e) => {
     ease: Power1.easeOut,
   });
 
-  
   gsap.to(".items", 1, {
     rotationY: xPos * 20,
     rotationX: yPos * 20,
